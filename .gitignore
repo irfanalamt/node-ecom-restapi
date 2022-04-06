@@ -1,5 +1,6 @@
 node_modules
 .npm
 *.env
-.env.test
+*.env.test
 *.txt
+*.log
