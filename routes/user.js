@@ -1,19 +1,30 @@
 const router = require("express").Router();
-const { verifyToken } = require("./verifyJWT");
+const User = require("../models/User");
+const { verifyToken, verifyTokenAuthorization } = require("./verifyJWT");
 
 router.get("/", (req, res) => {
   res.send("user endpoint hit");
 });
 
-router.put("/:id", verifyToken, (req, res) => {
-  if (req.user.id === req.params.id || req.user.isDev) {
-    res.status(202).json("You have permission to modify this record");
-  } else {
-    res.status(401).json("Not authorized to modify!");
+router.put("/:id", verifyTokenAuthorization, async (req, res) => {
+  if (req.body.password) {
+    req.body.password = Crypto.AES.encrypt(
+      req.body.password,
+      process.env.PASSPHRASE
+    ).toString();
   }
-  console.log(
-    `req.user=${JSON.stringify(req.user)} req.params.id=${req.params.id}`
-  );
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 module.exports = router;
