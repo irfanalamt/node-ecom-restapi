@@ -3,6 +3,7 @@ const User = require("../models/User");
 const Crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
+//Create a new user,encrypt password,save
 router.post("/register", async (req, res) => {
   const newUser = User({
     username: req.body.username,
@@ -16,11 +17,6 @@ router.post("/register", async (req, res) => {
   try {
     const savedUser = await newUser.save();
     console.log(savedUser);
-    console.log(
-      Crypto.AES.decrypt(savedUser.password, process.env.PASSPHRASE).toString(
-        Crypto.enc.Utf8
-      )
-    );
 
     res.status(201).json(savedUser);
   } catch (err) {
@@ -29,6 +25,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
+//Checks credential match,return JWT if success
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });

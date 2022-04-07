@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 
+//Middleware to verify JWT validity in header
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers.token;
 
@@ -17,6 +18,7 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+//Check if the user id in the JWT is same as the path parameter/or is dev.
 const verifyTokenAuthorization = (req, res, next) => {
   verifyToken(req, res, () => {
     if (req.user.id === req.params.id || req.user.isDev) {
@@ -30,6 +32,7 @@ const verifyTokenAuthorization = (req, res, next) => {
   });
 };
 
+//Check user in the JWT is developer
 const verifyTokenAdmin = (req, res, next) => {
   verifyToken(req, res, () => {
     if (req.user.isDev) {
