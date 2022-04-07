@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const productRoute = require("./routes/product");
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -17,6 +18,7 @@ mongoose
 app.use(express.json());
 app.use("/user", userRoute);
 app.use("/auth", authRoute);
+app.use("/product", productRoute);
 
 app.listen(5000 || process.env.PORT, () => {
   console.log("Express server running on port 5000.");
