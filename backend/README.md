@@ -28,5 +28,11 @@ user/
 | /user/find/:id | GET    | Get user details with id, JWT in header    | JSON data of user details except password | YES                   |
 | /user/:id      | PUT    | Update user details with id, JWT in header | JSON data of updated user details         | NO                    |
 | /user/:id      | Delete | Remove user details with id, JWT in header | JSON data of success message              | NO                    |
-| /user/all      | GET    | Get all user's details,JWT in header       | JSON data of all users                    | YES                   |
-| -------------- | ------ | ------------------------------------------ | ----------------------------------------- | --------------------- |
+| /user/all      | GET    | Get all user's details, JWT in header      | JSON data of all users                    | YES                   |
+
+auth/
+
+| Route          | Method | Description                                           | Returns                                            | Requires admin access |
+| -------------- | ------ | ----------------------------------------------------- | -------------------------------------------------- | --------------------- |
+| /auth/resister | POST   | Create a new user, encrypt password, save to database | JSON data new user                                 | NO                    |
+| /auth/login    | POST   | Checks credential match, return JWT if success        | JSON data of login details except password and JWT | NO                    |
