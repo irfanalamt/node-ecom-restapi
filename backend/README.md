@@ -15,9 +15,17 @@ This API was created for small scale e-commerce companies.
 2. In your terminal, navigate to the project root directory.
    `cd node-ecom-restapi `
 3. Run `npm install` to install all dependencies.
-4. Input environment variables in the .env file. (Mongo DB URL, Secrets)
+4. Input environment variables in the .env file.
 5. Run `node app.js` to start the app.
 6. Open your local browser and navigate to `http://localhost:5000`
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`MONGO_URL` - MongoDB connection URL
+`PASSPHRASE` - Passphrase for encryption (Crypto-js)
+`SECRET`- Secret for JSON web token
 
 ## Routes
 
@@ -34,5 +42,5 @@ auth/
 
 | Route          | Method | Description                                           | Returns                                            | Requires admin access |
 | -------------- | ------ | ----------------------------------------------------- | -------------------------------------------------- | --------------------- |
-| /auth/resister | POST   | Create a new user, encrypt password, save to database | JSON data new user                                 | NO                    |
+| /auth/resister | POST   | Create a new user, encrypt password, save to database | JSON data of new user                              | NO                    |
 | /auth/login    | POST   | Checks credential match, return JWT if success        | JSON data of login details except password and JWT | NO                    |
