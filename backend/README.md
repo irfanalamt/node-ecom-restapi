@@ -1,12 +1,7 @@
 # E-commerce REST api
 
 This API was created for small scale e-commerce companies.
-
-## Tech Stack
-
-**Client:** React
-
-**Server:** Node, Express , MongoDB
+Tech Stack: Node, Express , MongoDB
 
 ## Run Locally
 
@@ -40,7 +35,7 @@ user/
 
 auth/
 
-| Route          | Method | Description                                           | Returns                                            | Requires admin access |
-| -------------- | ------ | ----------------------------------------------------- | -------------------------------------------------- | --------------------- |
-| /auth/resister | POST   | Create a new user, encrypt password, save to database | JSON data of new user                              | NO                    |
-| /auth/login    | POST   | Checks credential match, return JWT if success        | JSON data of login details except password and JWT | NO                    |
+| Route          | Method | Description                                           | Returns                                             | Requires admin access |
+| -------------- | ------ | ----------------------------------------------------- | --------------------------------------------------- | --------------------- |
+| /auth/resister | POST   | Create a new user, encrypt password, save to database | JSON data of new user                               | NO                    |
+| /auth/login    | POST   | Checks credential match, return JWT if success        | JSON data of login details(except password) and JWT | NO                    |
