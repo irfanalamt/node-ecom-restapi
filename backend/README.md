@@ -21,6 +21,8 @@ This API was created for small scale e-commerce companies.
 
 ## Routes
 
+User/
+
 | Route          | Method | Description                                              | Returns                   | Requires admin access |
 | -------------- | ------ | -------------------------------------------------------- | ------------------------- | --------------------- |
 | /user/find/:id | GET    | Get user details with id as path parameter,JWT in header | JSON data of user details | YES                   |
