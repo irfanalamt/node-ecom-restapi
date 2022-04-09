@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import TextField from "@mui/material/TextField";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge, Container, Typography } from "@mui/material";
@@ -23,17 +22,21 @@ const Navbar = () => {
             css={{
               display: "flex",
               alignItems: "center",
-              marginLeft: "25px",
+              margin: 5,
               padding: "5px",
             }}
           >
-            <TextField placeholder="Search" size="small" css={{ width: 150 }} />
+            <TextField
+              placeholder="Search"
+              size="small"
+              style={{ width: 150 }}
+            />
             <Search sx={{ color: "gray", fontSize: 25 }} />
           </Container>
         </div>
         <div className="center" css={{ flex: 1, textAlign: "center" }}>
           <Typography
-            css={{ fontWeight: "bold" }}
+            css={{ fontWeight: "bold", marginTop: 10 }}
             variant="h4"
             component="div"
             gutterBottom
