@@ -7,8 +7,8 @@ Tech Stack: Node, Express , MongoDB
 
 1. Clone the repository.
    `git clone https://github.com/irfanalamt/node-ecom-restapi.git`
-2. In your terminal, navigate to the project root directory.
-   `cd node-ecom-restapi `
+2. In your terminal, navigate to the backend directory.
+   `cd node-ecom-restapi\backend `
 3. Run `npm install` to install all dependencies.
 4. Input environment variables in the .env file.
 5. Run `node app.js` to start the app.
