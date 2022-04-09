@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import hm1 from "../images/hm1.jpg";
 
 const containerStyle = () => {
@@ -39,12 +39,12 @@ const arrowStyle = () => {
 
 const Slider = () => {
   return (
-    <Container sx={containerStyle}>
+    <Box sx={containerStyle}>
       <Box direction="left" style={{ left: "10px" }} sx={boxStyle}>
         <ArrowLeftOutlined sx={arrowStyle} />
       </Box>
-      <Container sx={{ height: "100%", display: "flex" }} className="wrapper">
-        <Container
+      <Box sx={{ height: "100%", display: "flex" }} className="wrapper">
+        <Box
           classname="slider"
           sx={{
             height: "100vh",
@@ -53,16 +53,20 @@ const Slider = () => {
             alignItems: "center",
           }}
         >
-          <Container
-            sx={{ height: "100%", flex: 1, padding: "2px" }}
+          <Box
+            sx={{
+              height: "100%",
+              flex: 1,
+            }}
             className="imageContainer"
           >
-            <img src={hm1} alt="mypic" css={{ height: "80%" }} />
-          </Container>
-          <Container
-            sx={{ flex: 1, padding: "70px " }}
-            className="infoContainer"
-          >
+            <img
+              src={hm1}
+              alt="mypic"
+              css={{ height: "80%", margin: "5px 5px" }}
+            />
+          </Box>
+          <Box sx={{ flex: 1, padding: "70px " }} className="infoContainer">
             <Typography
               sx={{ fontSize: "70px" }}
               variant="h1"
@@ -95,14 +99,14 @@ const Slider = () => {
             >
               SHOP NOW
             </Button>
-          </Container>
-        </Container>
-      </Container>
+          </Box>
+        </Box>
+      </Box>
 
       <Box direction="right" style={{ right: "10px" }} sx={boxStyle}>
         <ArrowRightOutlined sx={arrowStyle} />
       </Box>
-    </Container>
+    </Box>
   );
 };
 
