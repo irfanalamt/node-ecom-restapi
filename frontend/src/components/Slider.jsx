@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import hm1 from "../images/hm1.jpg";
 import styled from "@emotion/styled";
 import { sliderItems } from "../sampleData";
 
@@ -90,7 +89,7 @@ const Slider = () => {
               className="imageContainer"
             >
               <img
-                src={hm1}
+                src={item.img}
                 alt="mypic"
                 css={{ height: "80%", margin: "5px 5px" }}
               />
