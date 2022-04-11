@@ -33,15 +33,15 @@ const Container = styled.div`
   position: relative;
 `;
 const Circle = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
 `;
 
 const Image = styled.img`
-  height: 75%;
+  height: 80%;
   z-index: 2;
 `;
 const Icon = styled.div`

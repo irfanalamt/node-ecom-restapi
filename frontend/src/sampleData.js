@@ -4,6 +4,14 @@ import hm1Lounge from "./images/hm-lounge.jpg";
 import hmShirt from "./images/hm-shirt.jpg";
 import hmLounge from "./images/hm-loungew.jpg";
 import hmJacket from "./images/hm-jacket.jpg";
+import blueHanger from "./images/bluehanger.jpg";
+import pinkFloral from "./images/pinkfloral.jpg";
+import blueJeans from "./images/blueJeans.jpg";
+import lightPink from "./images/lightPink.jpg";
+import weaveBag from "./images/weaveBag.jpg";
+import colaBag from "./images/colaBag.jpg";
+import apricotSkirt from "./images/apricotSkirt.jpg";
+import nirvanaTee from "./images/nirvanaTee.jpg";
 
 export const sliderItems = [
   {
@@ -50,34 +58,34 @@ export const categories = [
 export const popularProducts = [
   {
     id: 1,
-    img: hm1Autumn,
+    img: blueHanger,
   },
   {
     id: 2,
-    img: hm1Lounge,
+    img: colaBag,
   },
   {
     id: 3,
-    img: hm1Summer,
+    img: blueJeans,
   },
   {
     id: 4,
-    img: hm1Autumn,
+    img: lightPink,
   },
   {
     id: 5,
-    img: hm1Lounge,
+    img: weaveBag,
   },
   {
     id: 6,
-    img: hm1Summer,
+    img: pinkFloral,
   },
   {
     id: 7,
-    img: hm1Summer,
+    img: apricotSkirt,
   },
   {
     id: 8,
-    img: hm1Lounge,
+    img: nirvanaTee,
   },
 ];
