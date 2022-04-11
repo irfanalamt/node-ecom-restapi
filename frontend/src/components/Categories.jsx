@@ -6,7 +6,7 @@ const Categories = () => {
   return (
     <Container sx={{ display: "flex" }}>
       {categories.map((item) => (
-        <CategoryItem item={item} />
+        <CategoryItem item={item} key={item.id} />
       ))}
     </Container>
   );
