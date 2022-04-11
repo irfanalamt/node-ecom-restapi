@@ -45,9 +45,11 @@ const Image = styled.img`
   z-index: 2;
 `;
 const Icon = styled.div`
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: flex;
+  border-radius: 50%;
+  background-color: white;
   align-items: center;
   justify-content: center;
   margin: 10px;
@@ -57,11 +59,9 @@ const Icon = styled.div`
 
 const ProductItem = ({ item }) => {
   const onMouseOverIcon = (e) => {
-    e.target.style.color = "white";
     e.target.style.transform = "scale(1.1)";
   };
   const onMouseLeaveIcon = (e) => {
-    e.target.style.color = "black";
     e.target.style.transform = "scale(0.9)";
   };
   return (
