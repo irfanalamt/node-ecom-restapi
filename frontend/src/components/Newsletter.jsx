@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Send } from "@mui/icons-material";
-import { Button } from "@mui/material";
+import { SendRounded } from "@mui/icons-material";
+import { Button, TextField } from "@mui/material";
 const Container = styled.div`
   height: 60vh;
   background-color: #fcf5f5;
@@ -21,16 +21,14 @@ const Desc = styled.div`
 `;
 
 const InputContainer = styled.div`
-  width: 50%;
-  height: 40px;
-  background-color: white;
   display: flex;
   justify-content: space-between;
-  border: 1px solid lightgray;
+  height: 40px;
 `;
 
-const Input = styled.input`
-  border: none;
+const Input = styled(TextField)`
+  color: white;
+  width: 50%;
   flex: 8;
   padding-left: 20px;
 `;
@@ -46,9 +44,9 @@ const Newsletter = () => {
       <Title>Newsletter</Title>
       <Desc>Get timely updates from your favorite products.</Desc>
       <InputContainer>
-        <Input placeholder="Your email" />
+        <Input size="small" variant="outlined" placeholder="Your email" />
         <Button1 variant="contained">
-          <Send />
+          <SendRounded />
         </Button1>
       </InputContainer>
     </Container>
