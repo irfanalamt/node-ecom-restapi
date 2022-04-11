@@ -1,6 +1,9 @@
 import hm1Summer from "./images/hm-summer.jpg";
 import hm1Autumn from "./images/hm-autumn.jpg";
 import hm1Lounge from "./images/hm-lounge.jpg";
+import hmShirt from "./images/hm-shirt.jpg";
+import hmLounge from "./images/hm-loungew.jpg";
+import hmJacket from "./images/hm-jacket.jpg";
 
 export const sliderItems = [
   {
@@ -29,17 +32,17 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: hm1Summer,
+    img: hmShirt,
     title: "SHIRT STYLE!",
   },
   {
     id: 2,
-    img: hm1Lounge,
+    img: hmLounge,
     title: "LOUNGEWEAR LOVE",
   },
   {
     id: 3,
-    img: hm1Autumn,
+    img: hmJacket,
     title: "LIGHT JACKETS",
   },
 ];

@@ -13,7 +13,12 @@ const CategoryItem = ({ item }) => {
       }}
     >
       <img
-        css={{ width: "100%", height: "100%", objectFit: "cover" }}
+        css={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          margin: "2px",
+        }}
         src={item.img}
         alt=""
       />
