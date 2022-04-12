@@ -77,7 +77,7 @@ const Navbar = () => {
           }}
           className="cart"
         >
-          <Badge badgeContent={4} color="primary">
+          <Badge badgeContent={2} color="primary">
             <ShoppingCartOutlined p={100} />
           </Badge>
         </div>

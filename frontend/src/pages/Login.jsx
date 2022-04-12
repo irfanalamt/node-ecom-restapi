@@ -44,7 +44,8 @@ const Input = styled(TextField)`
 
 const ButtonStyled = styled(Button)`
   border: none;
-  width: 40%
+  width: 35%;
+  height: 40px;
   padding: 15px 20px;
   cursor: pointer;
   margin-bottom: 10px;

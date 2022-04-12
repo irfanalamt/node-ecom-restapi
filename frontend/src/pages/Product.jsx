@@ -117,12 +117,10 @@ const Product = () => {
           <Image src={popularProducts[2].img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jeans</Title>
+          <Title>Light denim blue jeans</Title>
           <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            corrupti magni cum nostrum deserunt cumque atque suscipit! Omnis
-            molestiae commodi laborum quibusdam aperiam repellendus doloribus
-            saepe iusto consequuntur? Dolorum, ullam.
+            Jeans with five pockets in washed cotton denim. A high waist, a zip
+            fly with a button, and straight, wide legs complete the look.
           </Desc>
           <Price>$ 20</Price>
           <FilterContainer>

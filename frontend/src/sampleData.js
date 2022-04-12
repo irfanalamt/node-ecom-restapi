@@ -12,6 +12,8 @@ import weaveBag from "./images/weaveBag.jpg";
 import colaBag from "./images/colaBag.jpg";
 import apricotSkirt from "./images/apricotSkirt.jpg";
 import nirvanaTee from "./images/nirvanaTee.jpg";
+import rollingstonesTee from "./images/rollingstonesTee.jpg";
+import nightgown from "./images/nightgown.jpg";
 
 export const sliderItems = [
   {
@@ -88,4 +90,9 @@ export const popularProducts = [
     id: 8,
     img: nirvanaTee,
   },
+];
+
+export const cartItems = [
+  { id: 1, img: rollingstonesTee },
+  { id: 2, img: nightgown },
 ];
