@@ -121,7 +121,12 @@ const Slider = () => {
                   padding: "10px",
                   fontsize: "20px",
                   cursor: "pointer",
+                  color: "black",
                   opacity: 0.9,
+                  ":hover": {
+                    bgcolor: "teal",
+                    color: "white",
+                  },
                 }}
                 variant="contained"
               >

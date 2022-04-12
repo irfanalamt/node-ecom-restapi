@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge, Container, Typography } from "@mui/material";
 import { InputAdornment } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -44,7 +45,9 @@ const Navbar = () => {
           component="div"
           gutterBottom
         >
-          RFN. SHOP
+          <Link style={{ textDecoration: "none", color: "black" }} to="/">
+            RFN. SHOP
+          </Link>
         </Typography>
       </div>
       <div
@@ -60,27 +63,40 @@ const Navbar = () => {
           css={{ fontSize: "14px", cursor: "pointer", marginLeft: "25px" }}
           className="register"
         >
-          REGISTER
-        </div>
-        <div
-          css={{ fontSize: "14px", cursor: "pointer", marginLeft: "25px" }}
-          className="signin"
-        >
-          SIGNIN
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/register"
+          >
+            REGISTER
+          </Link>
         </div>
         <div
           css={{
             fontSize: "14px",
             cursor: "pointer",
             marginLeft: "25px",
-            marginRight: "20px",
           }}
-          className="cart"
+          className="signin"
         >
-          <Badge badgeContent={2} color="primary">
-            <ShoppingCartOutlined p={100} />
-          </Badge>
+          <Link style={{ textDecoration: "none", color: "black" }} to="/login">
+            SIGNIN
+          </Link>
         </div>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/cart">
+          <div
+            css={{
+              fontSize: "14px",
+              cursor: "pointer",
+              marginLeft: "25px",
+              marginRight: "20px",
+            }}
+            className="cart"
+          >
+            <Badge badgeContent={2} color="primary">
+              <ShoppingCartOutlined p={100} />
+            </Badge>
+          </div>
+        </Link>
       </div>
     </Container>
   );

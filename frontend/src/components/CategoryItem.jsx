@@ -46,7 +46,14 @@ const CategoryItem = ({ item }) => {
           {item.title}
         </Typography>
         <Button
-          sx={{ backgroundColor: "white", color: "gray" }}
+          sx={{
+            backgroundColor: "white",
+            color: "gray",
+            ":hover": {
+              bgcolor: "#80cbc4",
+              color: "white",
+            },
+          }}
           variant="contained"
         >
           SHOP NOW
