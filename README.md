@@ -14,7 +14,7 @@ This project utilizes the MERN stack to create a full stack e-commerce applicati
 - JWT verification
 - Material UI design
 - Developer mode
-- CRUD operations on user, product, cart and order.
+- CRUD operations on user, product, cart and order
 
 ## Installation
 
@@ -30,12 +30,16 @@ $ npm install
 $ npm start
 ```
 
-b)Open new terminal, install front-end dependencies and start.(http://localhost:3000)
+    b)Open new terminal, install front-end dependencies and start.(http://localhost:3000)
 
 ```sh
 $ cd frontend
 $ npm install
 $ npm start
 ```
+
+## Acknowledgements
+
+- Zara,H&M - product image credits.
 
 ## ENJOY!
