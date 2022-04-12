@@ -117,7 +117,7 @@ const Product = () => {
           <Image src={popularProducts[2].img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
+          <Title>Denim Jeans</Title>
           <Desc>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
             corrupti magni cum nostrum deserunt cumque atque suscipit! Omnis
