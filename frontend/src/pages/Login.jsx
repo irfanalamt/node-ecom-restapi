@@ -81,7 +81,7 @@ const Login = () => {
           >
             LOGIN
           </ButtonStyled>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+          <Link>DO NOT REMEMBER PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
         </Form>
       </Wrapper>
