@@ -1,4 +1,4 @@
-FROM node
+FROM node:alpine
 LABEL version="1.0"
 LABEL description="Base docker image for the e-commerce frontend react app."
 LABEL maintainer = ["irfanalamt@gmail.com"]
