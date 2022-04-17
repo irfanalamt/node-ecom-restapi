@@ -10,8 +10,10 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 
+dbUrl = process.env.DB_URL || "mongodb://localhost/ecom";
+
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(dbUrl)
   .then(() => {
     console.log("Mongoose connection successfull.");
   })
