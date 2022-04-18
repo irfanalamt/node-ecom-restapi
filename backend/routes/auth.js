@@ -31,14 +31,14 @@ router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) {
-      return res.status(500).json("Invalid credentials");
+      return res.status(500).json({ message: "Invalid credentials" });
     }
     const pass = Crypto.AES.decrypt(
       user.password,
       process.env.PASSPHRASE
     ).toString(Crypto.enc.Utf8);
     if (pass !== req.body.password) {
-      return res.status(500).json("Invalid password");
+      return res.status(500).json({ message: "Invalid password" });
     }
     const accessToken = jwt.sign(
       { id: user._id, isDev: user.isDev },
@@ -48,7 +48,7 @@ router.post("/login", async (req, res) => {
     const { password, ...others } = user._doc;
     res.status(200).json({ ...others, accessToken });
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ message: error });
   }
 });
 

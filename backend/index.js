@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const cors = require("cors");
 dotenv.config();
+const cors = require("cors");
+
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const productRoute = require("./routes/product");
@@ -12,7 +13,6 @@ const orderRoute = require("./routes/order");
 const homeRoute = require("./routes/home");
 
 dbUrl = process.env.DB_URL || "mongodb://localhost:27017/ecom";
-
 mongoose
   .connect(dbUrl)
   .then(() => {

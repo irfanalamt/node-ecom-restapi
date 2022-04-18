@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 router.get("/hello", (req, res) => {
-  res.send({ message: "user endpoint hit" });
+  res.send({ message: "api connection success" });
   console.log("/ hit");
 });
 
