@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { Button, TextField } from "@mui/material";
+import { Alert, Button, TextField } from "@mui/material";
 
 const Container = styled.div`
   width: 100vw;
@@ -33,6 +33,7 @@ const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
 `;
 
 const Input = styled(TextField)`
@@ -59,6 +60,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,8 +84,9 @@ const Register = () => {
         setEmail("");
         setPassword("");
         setMessage("User created successfully");
+        setErrorMessage("");
       } else {
-        setMessage("Some error occured");
+        setErrorMessage("Some error occured");
       }
     } catch (err) {
       console.log(err);
@@ -119,7 +122,11 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <Input size="small" placeholder="password" />
+          <Input
+            size="small"
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <Input
             size="small"
             placeholder="confirm password"
@@ -145,7 +152,20 @@ const Register = () => {
           >
             CREATE
           </ButtonStyled>
-          <div className="message">{message ? <p>{message}</p> : null}</div>
+          {errorMessage ? (
+            <Alert variant="filled" severity="error">
+              {errorMessage}
+            </Alert>
+          ) : (
+            <></>
+          )}
+          {message ? (
+            <Alert variant="filled" severity="success">
+              {message}
+            </Alert>
+          ) : (
+            <></>
+          )}
         </Form>
       </Wrapper>
     </Container>

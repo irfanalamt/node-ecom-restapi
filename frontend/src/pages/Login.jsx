@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { Button, TextField } from "@mui/material";
+import { Alert, Button, TextField } from "@mui/material";
 
 const Container = styled.div`
   width: 100vw;
@@ -60,13 +60,59 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("/auth/login", {
+        method: "POST",
+        body: JSON.stringify({
+          username: userName,
+          password: password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.status === 200) {
+            setUserName("");
+            setPassword("");
+            setMessage("User login success.");
+            setErrorMessage("");
+          } else {
+            setErrorMessage(data.message);
+          }
+          localStorage.setItem("webToken", data.accessToken);
+          localStorage.setItem("userName", data.username);
+          console.log(data);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
-        <Form>
-          <Input size="small" placeholder="username" />
-          <Input size="small" placeholder="password" />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            size="small"
+            placeholder="username"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <Input
+            size="small"
+            placeholder="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <ButtonStyled
             sx={{
               backgroundColor: "teal",
@@ -78,11 +124,26 @@ const Login = () => {
             }}
             variant="contained"
             size="small"
+            type="submit"
           >
             LOGIN
           </ButtonStyled>
           <Link>DO NOT REMEMBER PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
+          {errorMessage ? (
+            <Alert variant="filled" severity="error">
+              {errorMessage}
+            </Alert>
+          ) : (
+            <></>
+          )}
+          {message ? (
+            <Alert variant="filled" severity="success">
+              {message}
+            </Alert>
+          ) : (
+            <></>
+          )}
         </Form>
       </Wrapper>
     </Container>
