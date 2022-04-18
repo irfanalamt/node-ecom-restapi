@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Button, TextField } from "@mui/material";
 
@@ -53,17 +53,79 @@ const ButtonStyled = styled(Button)`
 `;
 
 const Register = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("/auth/register", {
+        method: "POST",
+        body: JSON.stringify({
+          username: userName,
+          email: email,
+          password: password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+
+      if (res.status === 201) {
+        setFirstName("");
+        setLastName("");
+        setUserName("");
+        setEmail("");
+        setPassword("");
+        setMessage("User created successfully");
+      } else {
+        setMessage("Some error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
-        <Form>
-          <Input size="small" placeholder="name" />
-          <Input size="small" placeholder="last name" />
-          <Input size="small" placeholder="username" />
-          <Input size="small" placeholder="email" />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            size="small"
+            placeholder="first name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <Input
+            size="small"
+            placeholder="last name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <Input
+            size="small"
+            placeholder="username"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <Input
+            size="small"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <Input size="small" placeholder="password" />
-          <Input size="small" placeholder="confirm password" />
+          <Input
+            size="small"
+            placeholder="confirm password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
@@ -79,9 +141,11 @@ const Register = () => {
             }}
             variant="contained"
             size="small"
+            type="submit"
           >
             CREATE
           </ButtonStyled>
+          <div className="message">{message ? <p>{message}</p> : null}</div>
         </Form>
       </Wrapper>
     </Container>
