@@ -9,8 +9,9 @@ const authRoute = require("./routes/auth");
 const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
+const homeRoute = require("./routes/home");
 
-dbUrl = process.env.DB_URL || "mongodb://localhost/ecom";
+dbUrl = process.env.DB_URL || "mongodb://localhost:27017/ecom";
 
 mongoose
   .connect(dbUrl)
@@ -23,6 +24,7 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
+app.use("/", homeRoute);
 app.use("/user", userRoute);
 app.use("/auth", authRoute);
 app.use("/product", productRoute);

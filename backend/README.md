@@ -26,12 +26,12 @@ To run this project, you will need to add the following environment variables to
 
 user/
 
-| Route          | Method | Description                                | Returns                                   | Requires admin access |
-| -------------- | ------ | ------------------------------------------ | ----------------------------------------- | --------------------- |
-| /user/find/:id | GET    | Get user details with id, JWT in header    | JSON data of user details except password | YES                   |
-| /user/:id      | PUT    | Update user details with id, JWT in header | JSON data of updated user details         | NO                    |
-| /user/:id      | Delete | Remove user details with id, JWT in header | JSON data of success message              | NO                    |
-| /user/all      | GET    | Get all user's details, JWT in header      | JSON data of all users                    | YES                   |
+| Route          | Method | Description                              | Returns                                   | Requires admin access |
+| -------------- | ------ | ---------------------------------------- | ----------------------------------------- | --------------------- |
+| /user/find/:id | GET    | Get user details by id, JWT in header    | JSON data of user details except password | YES                   |
+| /user/:id      | PUT    | Update user details by id, JWT in header | JSON data of updated user details         | NO                    |
+| /user/:id      | Delete | Remove user details by id, JWT in header | JSON data of success message              | NO                    |
+| /user/all      | GET    | Get all user's details, JWT in header    | JSON data of all users                    | YES                   |
 
 auth/
 
