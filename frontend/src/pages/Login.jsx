@@ -78,15 +78,17 @@ const Login = () => {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-        .then((res) => res.json())
+        .then((data) => data.json())
         .then((data) => {
-          if (data.status === 200) {
+          console.log(data);
+          if (data.accessToken) {
             setUserName("");
             setPassword("");
             setMessage("User login success.");
             setErrorMessage("");
           } else {
             setErrorMessage(data.message);
+            setMessage("");
           }
           localStorage.setItem("webToken", data.accessToken);
           localStorage.setItem("userName", data.username);
@@ -112,6 +114,7 @@ const Login = () => {
             placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            type="password"
           />
           <ButtonStyled
             sx={{
