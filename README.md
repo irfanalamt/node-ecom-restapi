@@ -22,13 +22,14 @@ This project utilizes the MERN stack to create a full stack e-commerce applicati
    `git clone https://github.com/irfanalamt/node-ecom-restapi.git`
 3. Check the proxy property in package.json of the React app. It should look like this. `"proxy": "http://api:5000"`
 4. Navigate into the project directory, start and run all containers.
+   Access the application on browser. `http://localhost:3000`
 
 ```sh
 $ cd node-ecom-restapi
 $ docker-compose up
 ```
 
-5. When done, stop and remove all containers. `docker-compose down`
+5.  When done, stop and remove all containers. `docker-compose down`
 
 ### b) Manual start
 
