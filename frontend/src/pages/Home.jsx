@@ -1,3 +1,4 @@
+import { Alert } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Announcement from "../components/Announcement";
 import Categories from "../components/Categories";
@@ -17,7 +18,29 @@ const Home = () => {
   return (
     <div>
       <Announcement />
-      <p>{!data ? "Loading..." : data}</p>
+
+      {data ? (
+        <Alert
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 10,
+            height: 15,
+            fontSize: 10,
+            alignItems: "center",
+            backgroundColor: "#8bc34a",
+            color: "black",
+            opacity: 0.8,
+          }}
+          variant="filled"
+          severity="info"
+          icon={false}
+        >
+          {data}
+        </Alert>
+      ) : (
+        <></>
+      )}
       <Navbar />
       <Slider />
       <Categories />
