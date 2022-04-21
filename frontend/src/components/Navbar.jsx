@@ -13,6 +13,7 @@ const Navbar = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#fce4ec",
       }}
     >
       <div className="left" css={{ flex: 1 }}>
@@ -92,7 +93,7 @@ const Navbar = () => {
             }}
             className="cart"
           >
-            <Badge badgeContent={2} color="primary">
+            <Badge badgeContent={2} sx={{ color: "#6573c3" }}>
               <ShoppingCartOutlined p={100} />
             </Badge>
           </div>

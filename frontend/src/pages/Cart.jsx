@@ -25,14 +25,12 @@ const Top = styled.div`
   padding: 20px;
 `;
 
-const TopButton = styled.button`
+const TopButton = styled(Button)`
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
-  border: ${(props) => props.type === "filled" && "none"};
-  background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
-  color: ${(props) => props.type === "filled" && "white"};
+  background-color: #212121;
+  border: solid black;
 `;
 
 const TopTexts = styled.div``;
@@ -144,7 +142,7 @@ const SummaryItemPrice = styled.span``;
 const ButtonStyled = styled(Button)`
   width: 100%;
   padding: 10px;
-  background-color: black;
+  background-color: #3f51b5;
   color: white;
   font-weight: 600;
 `;
@@ -158,12 +156,16 @@ const Cart = () => {
         <Wrapper>
           <Title>YOUR BAG</Title>
           <Top>
-            <TopButton>CONTINUE SHOPPING</TopButton>
+            <TopButton size="small" variant="contained">
+              CONTINUE SHOPPING
+            </TopButton>
             <TopTexts>
               <TopText>Shopping Bag(2)</TopText>
               <TopText>Your Wishlist (0)</TopText>
             </TopTexts>
-            <TopButton type="filled">CHECKOUT NOW</TopButton>
+            <TopButton size="small" variant="contained">
+              CHECKOUT NOW
+            </TopButton>
           </Top>
           <Bottom>
             <Info>

@@ -121,7 +121,8 @@ const Slider = () => {
                   padding: "10px",
                   fontsize: "20px",
                   cursor: "pointer",
-                  color: "black",
+                  color: "white",
+                  backgroundColor: "#3f51b5",
                   opacity: 0.9,
                   ":hover": {
                     bgcolor: "teal",

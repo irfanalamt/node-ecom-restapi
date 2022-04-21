@@ -8,7 +8,7 @@ const Announcement = () => {
         alignItems: "center",
         height: "25px",
         display: "flex",
-        backgroundColor: "#009688",
+        backgroundColor: "#2c387e",
         color: "white",
         fontSize: "15px",
         fontWeight: "500",
