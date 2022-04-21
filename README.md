@@ -2,8 +2,10 @@
 
 This project utilizes the MERN stack to create a full stack e-commerce application. The front-end is a React app, and the backend is a REST API.
 
-![Alt text](https://user-images.githubusercontent.com/64161258/163041316-31e0ac37-961d-492c-aadd-55889f7a9f75.png "Screenshot-1")
-![Alt text](https://user-images.githubusercontent.com/64161258/163042691-549ee921-c984-442a-a49c-ccf2792da398.png "Screenshot-2")
+![Alt text](https://user-images.githubusercontent.com/64161258/164353605-652ba305-2606-4dae-af87-0dbf67fba067.png "Screenshot-home")
+![Alt text](https://user-images.githubusercontent.com/64161258/164353609-21967ea9-0477-4476-8b24-193c325cd881.png "Screenshot-products")
+![Alt text](https://user-images.githubusercontent.com/64161258/164353611-907b425c-992e-4e95-86bc-21710ba3857b.png "Screenshot-cart")
+
 
 ## Features
 
