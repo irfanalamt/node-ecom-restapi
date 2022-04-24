@@ -130,6 +130,7 @@ const Slider = () => {
                   },
                 }}
                 variant="contained"
+                href="/productlist"
               >
                 SHOP NOW
               </Button>
