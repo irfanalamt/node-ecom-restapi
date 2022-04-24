@@ -141,8 +141,8 @@ const Register = () => {
           </Agreement>
           <ButtonStyled
             sx={{
-              backgroundColor: "teal",
-              color: "black",
+              backgroundColor: "#3f51b5",
+              color: "white",
               ":hover": {
                 bgcolor: "#2196f3",
                 color: "white",

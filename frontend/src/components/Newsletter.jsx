@@ -34,7 +34,7 @@ const Input = styled(TextField)`
 `;
 
 const Button1 = styled(Button)`
-  background-color: teal;
+  background-color: #3f51b5;
   color: whitesmoke;
 `;
 
