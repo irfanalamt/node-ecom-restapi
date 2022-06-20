@@ -29,9 +29,7 @@ export default function Home({ data }) {
         <h1 className={styles.title}>Welcome to my awesome app</h1>
 
         <p className={styles.description}>Lets go super dev!</p>
-        <button type='button' class='btn btn-primary'>
-          Primary
-        </button>
+
         <ul className={styles.grid}>
           {results.map((result) => {
             const { id, name } = result;
