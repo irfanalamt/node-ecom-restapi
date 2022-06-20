@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Styles from '../styles/Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={`navbar bg-light shadow-sm py-2 mt-2 ${Styles.nav_form}`}>
+    <nav className={`navbar bg-light shadow-sm py-2 mt-2 ${styles.nav_form}`}>
       <form className='col-3 d-inline-flex my-auto' role='search'>
         <input
           className='form-control form-control-sm ms-4 m-2'
