@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
 }
 
 .footer {
@@ -72,9 +71,6 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
 }
 
 .card {
@@ -87,7 +83,6 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
-  background-color: aliceblue;
 }
 
 .card:hover,

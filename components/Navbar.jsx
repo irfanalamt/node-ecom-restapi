@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Styles from '../styles/Navbar.module.css';
+
 const Navbar = () => {
   return (
     <nav className={`navbar bg-light shadow-sm py-2 mt-2 ${Styles.nav_form}`}>
@@ -18,7 +19,7 @@ const Navbar = () => {
         </button>
       </form>
       <Link href='/' className='col-1'>
-        <a className='navbar-brand col-2 display-6 fw-bold'>RFN shop</a>
+        <a className='navbar-brand col-2 display-6 fw-bold fs-4'>RFN shop</a>
       </Link>
       <Link href='/' className='col-1'>
         <a className='col-1'>Register</a>
