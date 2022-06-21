@@ -19,13 +19,17 @@ const Navbar = () => {
         </button>
       </form>
       <Link href='/' className='col-1'>
-        <a className='navbar-brand col-2 display-6 fw-bold fs-4'>RFN shop</a>
+        <a
+          className={`navbar-brand col-2 display-6 fw-bold fs-4 ${styles.nav_link}`}
+        >
+          RFN shop
+        </a>
       </Link>
       <Link href='/' className='col-1'>
-        <a className='col-1'>Register</a>
+        <a className={styles.nav_link}>Register</a>
       </Link>
       <Link href='/' className='col-1'>
-        <a className='col-1'>Login</a>
+        <a className={styles.nav_link}>Login</a>
       </Link>
       <Link href='/' className='col-1'>
         <i className='bi bi-cart4 me-5 fs-4'></i>
