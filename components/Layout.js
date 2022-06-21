@@ -1,14 +1,12 @@
-import Footer from './Footer';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );
-};
-
-export default Layout;
+}

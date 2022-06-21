@@ -1,7 +1,5 @@
-import styles from '../styles/Home.module.css';
-
 const Footer = () => {
-  return <div className={styles.footer}>@irfanalamt</div>;
+  return <h1>Footer</h1>;
 };
 
 export default Footer;

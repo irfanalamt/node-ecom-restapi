@@ -1,24 +1,36 @@
-import '../styles/globals.css';
 import Layout from '../components/Layout';
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
-import Script from 'next/script';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { CacheProvider } from '@emotion/react';
+import theme from '../src/theme';
+import createEmotionCache from '../src/createEmotionCache.js';
 
-function MyApp({ Component, pageProps }) {
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
+
+export default function MyApp(props) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
-    <>
+    <CacheProvider value={emotionCache}>
       <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
-      <Script
-        src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'
-        integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2'
-        crossOrigin='anonymous'
-      ></Script>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
 
-export default MyApp;
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  emotionCache: PropTypes.object,
+  pageProps: PropTypes.object.isRequired,
+};
