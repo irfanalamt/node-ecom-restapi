@@ -1,5 +1,7 @@
+import * as React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import { Box, Container } from '@mui/system';
+import { Link, Typography } from '@mui/material';
 
 export default function Home() {
   return (
@@ -10,6 +12,16 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <h2>This is index</h2>
+      <Container maxWidth='sm'>
+        <Box sx={{ my: 4 }}>
+          <Typography variant='h4' component='h1' gutterBottom>
+            Test page
+          </Typography>
+          <Link href='/about' color='secondary'>
+            Go to the about page
+          </Link>
+        </Box>
+      </Container>
     </>
   );
 }
