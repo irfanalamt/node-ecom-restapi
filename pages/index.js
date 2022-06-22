@@ -2,8 +2,8 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Box, Container } from '@mui/system';
 import { Link, Typography } from '@mui/material';
-import Navbar from '../src/components/Navbar';
-import Footer from '../src/components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
