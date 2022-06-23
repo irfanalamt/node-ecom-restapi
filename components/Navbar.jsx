@@ -2,10 +2,7 @@ import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import {
   alpha,
   Badge,
-  Container,
   Typography,
-  TextField,
-  InputAdornment,
   AppBar,
   Toolbar,
   InputBase,
