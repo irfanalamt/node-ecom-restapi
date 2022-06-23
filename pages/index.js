@@ -20,10 +20,7 @@ export default function Index() {
           </Link>
         </Box>
       </Container>
-      <Footer
-        title='Where comfort and style meet. #modern'
-        description='@irfanalamt'
-      />
+      <Footer title='Where comfort and style meet.' description='@irfanalamt' />
     </>
   );
 }

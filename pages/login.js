@@ -2,11 +2,11 @@ import {
   Avatar,
   Button,
   TextField,
-  Link,
   Grid,
   Box,
   Container,
   Paper,
+  Link,
 } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import Logo from '../components/Logo';
@@ -51,7 +51,7 @@ export default function Login() {
             sx={{
               m: 1,
               bgcolor: 'secondary.main',
-              paddingRight: '5px',
+              paddingRight: '8px',
             }}
           >
             <LoginIcon />
@@ -93,14 +93,12 @@ export default function Login() {
             >
               Login
             </Button>
-            <Grid container justifyContent='flex-end'>
-              <Grid item>
-                <Link href='/signup' variant='body2'>
-                  New user? Sign up
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
+          <Grid container justifyContent='flex-end'>
+            <Button variant='text' size='small' href='/signup'>
+              New user? Signup
+            </Button>
+          </Grid>
         </Box>
       </Paper>
     </Container>
