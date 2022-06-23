@@ -1,89 +1,76 @@
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
+import { Search, ShoppingCartOutlined } from '@mui/icons-material';
+import {
+  alpha,
+  Badge,
+  Container,
+  Typography,
+  TextField,
+  InputAdornment,
+  AppBar,
+  Toolbar,
+  InputBase,
+  Button,
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Link from '../src/Link';
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
+const LogoLg = styled(Typography)(({ theme }) => ({
+  display: 'none',
+  fontWeight: 'bold',
+  [theme.breakpoints.up('sm')]: { display: 'block' },
+}));
+const LogoSm = styled(Typography)(({ theme }) => ({
+  display: 'block',
+  fontWeight: 'bold',
+  [theme.breakpoints.up('sm')]: { display: 'none' },
+}));
+
+const SearchDiv = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
-    },
-  },
+  borderRadius: theme.shape.borderRadius,
+  width: '20%',
 }));
 
 const Navbar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static'>
-        <Toolbar>
-          <IconButton
-            size='large'
-            edge='start'
-            color='inherit'
-            aria-label='open drawer'
-            sx={{ mr: 2 }}
+    <AppBar position='static'>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <SearchDiv>
+          <Search sx={{ marginLeft: '5px' }} />
+          <InputBase
+            sx={{ marginLeft: '5px' }}
+            color='white'
+            placeholder='Search...'
+          />
+        </SearchDiv>
+        <LogoLg variant='h6'>RFN shop</LogoLg>
+        <LogoSm variant='h6'>RFN</LogoSm>
+        <div style={{ alignItems: 'center' }}>
+          <Button
+            variant='contained'
+            href='/login'
+            sx={{ color: 'white', borderRadius: '5px' }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant='h6'
-            noWrap
-            component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            Login
+          </Button>
+          <Button
+            variant='contained'
+            href='/signup'
+            sx={{ color: 'white', marginLeft: '10px', borderRadius: '5px' }}
           >
-            MUI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder='Search…'
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-        </Toolbar>
-      </AppBar>
-    </Box>
+            Signup
+          </Button>
+        </div>
+        <Badge sx={{ marginRight: '15px' }} badgeContent={4} color='secondary'>
+          <ShoppingCartOutlined />
+        </Badge>
+      </Toolbar>
+    </AppBar>
   );
 };
 

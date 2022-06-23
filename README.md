@@ -1,6 +1,6 @@
 ### 🏗️⚒️ Under construction
 
-This is an experimental branch testing out Next.js features. Checkout the 'main' branch for a stable build.
+This is an experimental branch testing out Next.js features. Checkout the 'stable' branch for a working build.
 
 ## Getting Started
 
