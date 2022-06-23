@@ -35,7 +35,9 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Logo />
+          <Link href='/'>
+            <Logo />
+          </Link>
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>

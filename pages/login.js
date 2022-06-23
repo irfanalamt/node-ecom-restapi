@@ -35,7 +35,9 @@ export default function Login() {
             alignItems: 'center',
           }}
         >
-          <Logo />
+          <Link href='/'>
+            <Logo />
+          </Link>
           <Avatar
             sx={{
               m: 1,

@@ -9,7 +9,6 @@ import {
   Button,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Link from '../src/Link';
 
 const LogoLg = styled(Typography)(({ theme }) => ({
   display: 'none',
@@ -39,11 +38,7 @@ const Navbar = () => {
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <SearchDiv>
           <Search sx={{ marginLeft: '5px' }} />
-          <InputBase
-            sx={{ marginLeft: '5px' }}
-            color='white'
-            placeholder='Search...'
-          />
+          <InputBase sx={{ marginLeft: '5px' }} color='white' />
         </SearchDiv>
         <LogoLg variant='h6'>RFN shop</LogoLg>
         <LogoSm variant='h6'>RFN</LogoSm>
