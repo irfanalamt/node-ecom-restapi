@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Logo from '../components/Logo';
+import Image from 'next/image';
 
 export default function SignUp() {
   const handleSubmit = (event) => {
@@ -23,8 +24,20 @@ export default function SignUp() {
 
   return (
     <Container component='main' maxWidth='xs'>
+      <Image
+        style={{ opacity: '0.4', zIndex: -1 }}
+        src='/images/back.jpg'
+        alt=''
+        layout='fill'
+        objectFit='cover'
+        objectPosition='center'
+      />
       <Paper
-        sx={{ padding: '15px', paddingX: '15px', margin: '10px' }}
+        sx={{
+          padding: '15px',
+          paddingX: '15px',
+          margin: '10px',
+        }}
         elevation={3}
       >
         <Box
@@ -102,7 +115,7 @@ export default function SignUp() {
             <Grid container justifyContent='flex-end'>
               <Grid item>
                 <Link href='/login' variant='body2'>
-                  Already have an account? Sign in
+                  Already have an account? Login
                 </Link>
               </Grid>
             </Grid>

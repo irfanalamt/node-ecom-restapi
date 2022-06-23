@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import Logo from '../components/Logo';
+import Image from 'next/image';
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -23,6 +24,14 @@ export default function Login() {
 
   return (
     <Container component='main' maxWidth='xs'>
+      <Image
+        style={{ opacity: '0.4', zIndex: -1 }}
+        src='/images/back.jpg'
+        alt=''
+        layout='fill'
+        objectFit='cover'
+        objectPosition='center'
+      />
       <Paper
         sx={{ padding: '15px', paddingX: '15px', marginTop: '30px' }}
         elevation={3}
