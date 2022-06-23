@@ -38,7 +38,7 @@ const SearchDiv = styled('div')(({ theme }) => ({
 
 const Navbar = () => {
   return (
-    <AppBar position='static'>
+    <AppBar position='static' sx={{ backgroundColor: '#009687' }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <SearchDiv>
           <Search sx={{ marginLeft: '5px' }} />
@@ -54,14 +54,23 @@ const Navbar = () => {
           <Button
             variant='contained'
             href='/login'
-            sx={{ color: 'white', borderRadius: '5px' }}
+            sx={{
+              color: 'white',
+              borderRadius: '5px',
+              backgroundColor: '#00897A',
+            }}
           >
             Login
           </Button>
           <Button
             variant='contained'
             href='/signup'
-            sx={{ color: 'white', marginLeft: '10px', borderRadius: '5px' }}
+            sx={{
+              color: 'white',
+              marginLeft: '10px',
+              borderRadius: '5px',
+              backgroundColor: '#00897A',
+            }}
           >
             Signup
           </Button>
