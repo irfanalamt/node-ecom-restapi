@@ -5,20 +5,14 @@ import Box from '@mui/material/Box';
 import Link from '../src/Link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ProductList from '../components/ProductList';
 
 export default function Index() {
   return (
     <>
       <Navbar />
       <Container>
-        <Box sx={{ my: 4 }}>
-          <Typography variant='h4' component='h1' gutterBottom>
-            RFN shop coming up!
-          </Typography>
-          <Link href='/about' color='secondary'>
-            Go to the about page
-          </Link>
-        </Box>
+        <ProductList />
       </Container>
       <Footer title='Where comfort and style meet.' description='@irfanalamt' />
     </>

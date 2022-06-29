@@ -20,9 +20,6 @@ function Footer({ description, title }) {
         bgcolor: 'background.paper',
         py: 6,
         width: '100%',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
         textAlign: 'center',
       }}
     >
