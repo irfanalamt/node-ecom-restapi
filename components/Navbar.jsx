@@ -7,8 +7,10 @@ import {
   Toolbar,
   InputBase,
   Button,
+  Link,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import NextLink from 'next/link';
 
 const LogoLg = styled(Typography)(({ theme }) => ({
   display: 'none',
@@ -67,9 +69,17 @@ const Navbar = () => {
             Signup
           </Button>
         </div>
-        <Badge sx={{ marginRight: '15px' }} badgeContent={4} color='secondary'>
-          <ShoppingCartOutlined />
-        </Badge>
+        <NextLink href='/cart' passHref>
+          <Link color='inherit'>
+            <Badge
+              sx={{ marginRight: '15px' }}
+              badgeContent={4}
+              color='secondary'
+            >
+              <ShoppingCartOutlined />
+            </Badge>
+          </Link>
+        </NextLink>
       </Toolbar>
     </AppBar>
   );
