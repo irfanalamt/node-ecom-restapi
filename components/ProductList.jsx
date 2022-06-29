@@ -11,6 +11,7 @@ import {
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { maxHeight } from '@mui/system';
 import { products } from '../data';
+import NextLink from 'next/link';
 
 const ProductList = () => {
   return (
@@ -26,23 +27,25 @@ const ProductList = () => {
         {products.map((product) => (
           <Grid sx={{ marginX: 'auto' }} item md={4} key={product.name}>
             <Card>
-              <CardActionArea>
-                <CardMedia
-                  sx={{
-                    padding: 0.8,
-                    objectFit: 'cover',
-                    maxHeight: 495,
-                  }}
-                  component='img'
-                  image={product.image}
-                  title={product.name}
-                ></CardMedia>
-                <CardContent sx={{ textAlign: 'center' }}>
-                  <Typography sx={{ fontSize: '1rem' }} variant='caption'>
-                    {product.name}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <NextLink href={`/product/${product.slug}`} passHref>
+                <CardActionArea>
+                  <CardMedia
+                    sx={{
+                      padding: 0.8,
+                      objectFit: 'cover',
+                      maxHeight: 495,
+                    }}
+                    component='img'
+                    image={product.image}
+                    title={product.name}
+                  ></CardMedia>
+                  <CardContent sx={{ textAlign: 'center' }}>
+                    <Typography sx={{ fontSize: '1rem' }} variant='caption'>
+                      {product.name}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </NextLink>
               <CardActions>
                 <Typography
                   sx={{ fontWeight: 420 }}

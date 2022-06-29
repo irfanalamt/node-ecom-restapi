@@ -1,6 +1,7 @@
 export const products = [
   {
     name: 'Ribbed Tank Top',
+    slug: 'ribbed-tank-top',
     category: 'Tops',
     image: '/images/ribbed-tank-top.jpg',
     price: 70,
@@ -13,6 +14,7 @@ export const products = [
   },
   {
     name: 'Cotton Shirt',
+    slug: 'blue-cotton-shirt',
     category: 'Tops',
     image: '/images/blue-cotton-shirt.jpg',
     price: 80,
@@ -25,6 +27,7 @@ export const products = [
   },
   {
     name: 'Short Cotton Blouse',
+    slug: 'short-cotton-blouse',
     category: 'Tops',
     image: '/images/short-cotton-blouse.jpg',
     price: 90,
@@ -37,6 +40,7 @@ export const products = [
   },
   {
     name: 'Linen-blend Pull-on Pants',
+    slug: 'linen-blend-pants',
     category: 'Pants',
     image: '/images/linen-blend-pants.jpg',
     price: 90,
@@ -49,6 +53,7 @@ export const products = [
   },
   {
     name: 'Rib-knit Pants',
+    slug: 'rib-knit-pants',
     category: 'Pants',
     image: '/images/rib-knit-pants.jpg',
     price: 95,
@@ -60,7 +65,8 @@ export const products = [
       'Ribbed, ankle-length pants in a soft, fine, rib-knit viscose blend. High waist with a waistband and wide legs.',
   },
   {
-    name: 'Flared trousers',
+    name: 'Flared Trousers',
+    slug: 'flared-trousers',
     category: 'Pants',
     image: '/images/flared-trousers.jpg',
     price: 75,
