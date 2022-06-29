@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import Head from 'next/head';
-import { Chip, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import ErrorIcon from '@mui/icons-material/Error';
 
@@ -16,7 +15,7 @@ const Custom404 = () => {
           OOPS!
         </Typography>
         <Typography variant='subtitle1' gutterBottom component='div'>
-          We can't seem to find the page you are looking for.
+          We can&#39;t seem to find the page you are looking for.
         </Typography>
         <Typography variant='body2' gutterBottom>
           Error code:404
